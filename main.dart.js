@@ -8410,7 +8410,7 @@ a5m(){var s=0,r=A.w(t.z),q,p,o,n,m,l,k
 var $async$a5m=A.x(function(a,b){if(a===1)return A.t(b,r)
 while(true)switch(s){case 0:if($.am==null)A.GE()
 $.am.toString
-A.acr(A.aNg("AIzaSyBQhSSzqK7De1Kc05JHpWTrK5cLluloEcE","1:828379559700:web:dec69f2d47c7bba3477401","caawiyastore.firebaseapp.com",null,"G-NNWZ0SKJL5","828379559700","caawiyastore","caawiyastore.appspot.com"))
+A.acr(A.aNg("AIzaSyBQhSSzqK7De1Kc05JHpWTrK5cLluloEcE","1:828379559700:web:dec69f2d47c7bba3477401","caawiyastore.github.io",null,"G-NNWZ0SKJL5","828379559700","caawiyastore","caawiyastore.appspot.com"))
 if($.am==null)A.GE()
 $.am.toString
 q=A.aNx("GetStorage").e
