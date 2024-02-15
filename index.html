@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+  
+  <style>
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+    
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid blue;
+      border-right: 16px solid green;
+      border-bottom: 16px solid red;
+      border-left: 16px solid pink;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+    
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -18,28 +63,81 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="caawiya app">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="carwa_store">
+  <meta name="apple-mobile-web-app-title" content="Caawiya store">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 
   <title>carwa_store</title>
   <link rel="manifest" href="manifest.json">
 
+ 
+  
+
+
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2277729466";
+    const serviceWorkerVersion = "1382061365";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  
+  <!-- Include reCAPTCHA API script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 <body>
+
+  <div class="loading">
+    <div class="loader"></div>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- Add a div with ID "recaptcha" for reCAPTCHA rendering -->
+  <div id="recaptcha"></div>
+
+  <script type="module">
+
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBQhSSzqK7De1Kc05JHpWTrK5cLluloEcE",
+  authDomain: "caawiyastore.firebaseapp.com",
+  projectId: "caawiyastore",
+  storageBucket: "caawiyastore.appspot.com",
+  messagingSenderId: "828379559700",
+  appId: "1:828379559700:web:dec69f2d47c7bba3477401",
+  measurementId: "G-NNWZ0SKJL5"
+    };
+    
+    
+    
+    
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    
+    
+    
+    
+      </script>
+  <!-- Add buttons or forms to trigger authentication actions -->
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
